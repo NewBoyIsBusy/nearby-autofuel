@@ -2,6 +2,10 @@
 
 《饥荒联机版》独立服务器模组，版本 **1.0.0**。在需要燃料的建筑附近放一个箱子，或把燃料丢在地上，即可自动补充。
 
+[GitHub 源码](https://github.com/NewBoyIsBusy/nearby-autofuel) · [版本下载](https://github.com/NewBoyIsBusy/nearby-autofuel/releases)
+
+![自动添燃料：箱子按序取料，不溢出](assets/workshop-preview.jpg)
+
 ## 安装和使用
 
 1. 解压发布包，把 `nearby_autofuel` 整个文件夹复制到游戏的 `Don't Starve Together/mods/` 目录。`modinfo.lua` 应直接位于该文件夹内。
@@ -84,3 +88,7 @@
 python nearby_autofuel/tests/run_tests.py
 python nearby_autofuel/tests/run_game_smoke.py
 ```
+
+单独克隆仓库时，在仓库根目录执行 `python tests/run_tests.py`。测试依赖原版游戏脚本：可用环境变量 `DST_SCRIPTS_PATH` 指向自行从游戏安装目录解出的 `scripts` 目录；原版脚本不随本仓库分发。引擎测试可传入游戏目录：`python tests/run_game_smoke.py "你的 Don't Starve Together 目录"`。
+
+封面使用内置图像生成工具制作，原图为 `assets/workshop-cover.png`，创意工坊预览为相同画面的 JPEG 编码 `assets/workshop-preview.jpg`；生成提示词保存在 `assets/cover-prompt.txt`。
