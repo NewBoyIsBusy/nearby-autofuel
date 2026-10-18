@@ -4,7 +4,9 @@ description = [[建筑缺燃料时，自动取用附近箱子或地上的燃料�
 每次只取一个，剩余容量能完整容纳时才添加。
 支持火堆、石头火坑、冷火、暗夜灯、灭火器和薇诺娜发电机等。]]
 author = "wanzi"
-version = "1.0.0"
+version = "1.0.1"
+-- This package ships loose files, without a Klei-generated modmanifest.
+forcemanifest = false
 api_version = 10
 dst_compatible = true
 dont_starve_compatible = false

@@ -1,6 +1,6 @@
 # 附近自动添燃料（不浪费）
 
-《饥荒联机版》独立服务器模组，版本 **1.0.0**。在需要燃料的建筑附近放一个箱子，或把燃料丢在地上，即可自动补充。
+《饥荒联机版》独立服务器模组，版本 **1.0.1**。在需要燃料的建筑附近放一个箱子，或把燃料丢在地上，即可自动补充。
 
 [Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3822016512) · [GitHub 源码](https://github.com/NewBoyIsBusy/nearby-autofuel) · [版本下载](https://github.com/NewBoyIsBusy/nearby-autofuel/releases)
 
@@ -82,6 +82,8 @@
 
 - `tests/run_tests.py`：Lua 5.1 环境加载本工作目录原版 `Fueled`、`Trader` 组件，验证顺序、容量、潮湿倍率、单件扣除、拒收归还、共享取料等 28 项用例。需要 Python 和 `lupa`。
 - `tests/run_game_smoke.py`：使用本机 DST 专用服务器引擎，新建独立离线测试目录，临时加载验证副本，结束后删除临时模组，不读写现有世界。结果写入工作目录 `autofuel_test_storage/engine_console.log`。
+- `tests/run_workshop_smoke.py`：直接加载 Steam 已下载的两个工坊条目（自动添燃料和成长背包），在独立世界验证加载与功能；`--caves` 验证洞穴。需要同级 `growing_backpack` 源码目录和两项工坊订阅。`--expect-failure` 仅用于复现旧版发布包的缺少模块错误。
+- 工坊包以普通文件发布，不含 Klei 文件清单，`modinfo.lua` 必须保留 `forcemanifest = false`。本地模组测试无法覆盖工坊默认启用清单的加载差异。
 - 实现依据：本地 `game_scripts_reference/scripts/components/fueled.lua`、`container.lua`、`stackable.lua`、`trader.lua` 以及原版建筑预制物脚本。
 
 在工作目录执行：

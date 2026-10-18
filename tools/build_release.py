@@ -7,6 +7,7 @@ import zipfile
 
 source = Path(__file__).resolve().parents[1]
 version = re.search(r'version\s*=\s*"([^"]+)"', (source / 'modinfo.lua').read_text(encoding='utf-8')).group(1)
+assert re.search(r'^forcemanifest\s*=\s*false\s*$', (source / 'modinfo.lua').read_text(encoding='utf-8'), re.M), 'Loose Workshop packages must disable manifest loading'
 dist = source / 'dist'
 payload = dist / 'nearby_autofuel'
 payload.mkdir(parents=True, exist_ok=True)
