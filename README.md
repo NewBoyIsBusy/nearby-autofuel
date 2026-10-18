@@ -2,7 +2,9 @@
 
 《饥荒联机版》独立服务器模组，版本 **1.0.0**。在需要燃料的建筑附近放一个箱子，或把燃料丢在地上，即可自动补充。
 
-[GitHub 源码](https://github.com/NewBoyIsBusy/nearby-autofuel) · [版本下载](https://github.com/NewBoyIsBusy/nearby-autofuel/releases)
+[Steam 创意工坊](https://steamcommunity.com/sharedfiles/filedetails/?id=3822016512) · [GitHub 源码](https://github.com/NewBoyIsBusy/nearby-autofuel) · [版本下载](https://github.com/NewBoyIsBusy/nearby-autofuel/releases)
+
+创意工坊当前设置为仅好友可见；其他用户可使用 GitHub 安装包。
 
 ![自动添燃料：箱子按序取料，不溢出](assets/workshop-preview.jpg)
 
